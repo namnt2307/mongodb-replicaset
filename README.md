@@ -1,6 +1,9 @@
 mongo -u root -p
+
 mongo mongodb://root:password123@172.31.92.249:27017,172.31.82.252:27017,172.31.85.231:27017/?replicaSet=nam
+
 /// config tay
+
 rs.initiate(
   {
     _id : 'rs0',
@@ -11,6 +14,7 @@ rs.initiate(
     ]
   }
 )
+
 
 rsconf = {
   _id: "rs0",
