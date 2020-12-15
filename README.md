@@ -1,6 +1,8 @@
 mongo -u root -p
 
 mongo mongodb://root:password123@172.31.92.249:27017,172.31.82.252:27017,172.31.85.231:27017/?replicaSet=nam
+// (non root container)
+sudo chown -R 1001 ./mongodb_data
 
 /// config tay
 
