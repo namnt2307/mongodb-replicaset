@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo1
+    hostname: mongo1
+    entrypoint: [ "/usr/bin/mongod", "--replSet", "rs0","--bind_ip",""]
+    ports:
+      - "27017:27017"
+    network_mode: host
+    restart: always
+    volumes:
+      - "~/mongodb/:/data/db/"
